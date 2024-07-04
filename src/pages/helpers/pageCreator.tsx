@@ -16,7 +16,7 @@ export const Page:React.FC = () => {
 				{card!.title}
 			</Typography>
       		<img
-      		  style={{ maxHeight: 350, display: 'block', margin: '0 auto' }}
+      		  style={{ maxHeight: 350, maxWidth: '90%', display: 'block', margin: '0 auto', marginBottom: '40px' }}
       		  src={card!.image}
       		  alt={card!.title}
       		/>
