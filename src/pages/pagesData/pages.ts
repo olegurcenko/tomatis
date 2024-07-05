@@ -5,6 +5,7 @@ import central_role from './media/central_role.png'
 import therapy_goal from './media/therapy_goal.png'
 import how_therapy_works from './media/how_therapy_works.png'
 import efficiency_of_method from './media/efficiency_of_method.png'
+import mothers_voice from './media/mothers_voice.png'
 import { CardInterface } from '../helpers/cardsData'
 
 export const pagesData:CardInterface[] = [
@@ -184,8 +185,17 @@ export const pagesData:CardInterface[] = [
 			Пожилые:
 			• оптимизация и стабилизация остаточного слуха
 			• улучшение баланса в теле
-			• работа над памятью (деменция) и высшими психическими процессами
-			`,
+			• работа над памятью (деменция) и высшими психическими процессами`,
 		image: efficiency_of_method
+	},
+	{
+		link: 'mothers_voice',
+		title: 'Голос матери - основа успешной терапии',
+		text: `Мама - основа нашей психики и тела. Использование материнского голоса - это 70% успешности терапии. Нам нужен этот психологический элемент. Голос матери – это лекарство, с помощью которого мы будем стимулировать ухо, чтобы стимулировать мозг.
+			«Теория материнского голоса» профессора Томатиса была подтверждена в научном исследовании Стэнфордского университета под названием:
+			«Нейронные цепи, лежащие в основе восприятия голоса матери, предсказывают способности детей к социальному общению».
+
+			Терапия "голосом матери" - это уникальная возможность перезаписи генетической памяти!`,
+		image: mothers_voice
 	}
 ]
