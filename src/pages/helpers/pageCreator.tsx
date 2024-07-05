@@ -11,8 +11,8 @@ export const Page:React.FC = () => {
 	const pageName: string | null = new URLSearchParams(location.search).get('name');
 	const card = pagesData.find((card: { link: string | null; }) => card.link === pageName)
 	return (
-		<section style={{backgroundColor: colors.color_3, paddingBlock: 50, maxWidth: 1200, marginInline: 'auto'}}>
-			<Typography variant="h3" sx={{textAlign: 'center', marginBottom: '30px'}}>
+		<section style={{backgroundColor: colors.color_3, paddingBlock: 5, maxWidth: 1200, marginInline: 'auto', position: 'relative', top: '-5px'}}>
+			<Typography variant="h3" sx={{textAlign: 'center', marginBlock: '20px'}}>
 				{card!.title}
 			</Typography>
       		<img
