@@ -13,7 +13,7 @@ export const Header:React.FC = () => {
     {link: 'therapy', title: 'Суть терапии'},
     {link: 'price', title: 'Цены'},
     {link: 'equipment', title: 'Оборудование'},
-    {link: 'languages', title: 'Языки'}
+    {link: 'page?name=foreign_languages', title: 'Языки'}
   ];
 	const [mobileOpen, setMobileOpen] = React.useState(false);
 	const handleDrawerToggle = () => {
@@ -36,12 +36,12 @@ export const Header:React.FC = () => {
 		  <Divider />
 		  <List className={styles.linkListDrawer}>
 			{navItems.map((item) => (
-			  <ListItem key={item.title} disablePadding>
+			  <ListItem key={item.title}>
+				  <Link className={styles.linkDrawer} to={`/${item.link}`}>
 				<ListItemButton sx={{ textAlign: 'center' }}>
-				  <Link to={`/${item.link}`}>
           {item.title}
-				  </Link>
         </ListItemButton>
+				  </Link>
 			  </ListItem>
 			))}
 		  </List>
@@ -74,32 +74,32 @@ export const Header:React.FC = () => {
               open={open}
               onClose={handleClose}
               >
-        <MenuItem onClick={handleClose}>
-            <Link style={{color: colors.color_grey, textDecoration: 'none  '}} to={'/method'}>
+          <MenuItem onClick={handleClose}>
+            <Link style={{color: colors.color_grey, textDecoration: 'none', width: '100%'}} to={'/method'}>
               {'Метод'}
             </Link>
           </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link style={{color: colors.color_grey, textDecoration: 'none  '}} to={'/'}>
-            {'Оборудование'}
-          </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link style={{color: colors.color_grey, textDecoration: 'none  '}} to={'/therapy'}>
-            {'Суть терапии'}
-          </Link>
-        </MenuItem>
+          <MenuItem onClick={handleClose}>
+            <Link style={{color: colors.color_grey, textDecoration: 'none', width: '100%'}} to={'/'}>
+              {'Оборудование'}
+            </Link>
+          </MenuItem>
+          <MenuItem onClick={handleClose}>
+            <Link style={{color: colors.color_grey, textDecoration: 'none', width: '100%'}} to={'/therapy'}>
+              {'Суть терапии'}
+            </Link>
+          </MenuItem>
       </Menu>
-            <Button  className={styles.link}>
-              <Link to={'/price'}>
+            <Link to={'/price'}>
+              <Button  className={styles.link}>
                 {'Цены'}
-              </Link>
-            </Button>
-            <Button  className={styles.link}>
-              <Link to={'/languages'}>
+              </Button>
+            </Link>
+            <Link to={'/page?name=foreign_languages'}>
+              <Button  className={styles.link}>
                 {'Иностранные языки'}
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </Box>
         </Toolbar>
 		<Drawer
