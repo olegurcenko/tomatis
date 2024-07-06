@@ -1,4 +1,7 @@
 @import '../../media/colors.module';
+.linkDrawer {
+	width: 100%;
+}
 
 .header {
 	background-color: $color-3;
@@ -10,10 +13,8 @@
 			height: inherit;
 		}
 	}
-
 	.link {
 		color: $color-grey;
-
 		a {
 			color: $color-grey;
 			text-decoration: none;

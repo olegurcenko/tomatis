@@ -2,10 +2,12 @@ import { CardActionArea, CardMedia, CardContent, Typography, Card } from "@mui/m
 import React from "react";
 import { Link } from "react-router-dom";
 import { CardInterface } from "./cardsData";
+import { colors } from "../../media/colorsModule";
+import styles from './cardStyles.module.scss'
 
-export const CardWrapper:React.FC<CardInterface> = ({image, title, text, link, steps}) => {
+export const CardWrapper:React.FC<CardInterface> = ({image, title, text, link}) => {
 	return (
-		<Link to={`/page?name=${link}`}>
+		<Link className={styles.link} to={`/page?name=${link}`}>
 			<Card sx={{ width: 350, marginBlock: '20px' }}>
     	  		<CardActionArea>
     	    		<CardMedia
@@ -14,11 +16,11 @@ export const CardWrapper:React.FC<CardInterface> = ({image, title, text, link, s
     	    		  image={image}
     	    		  alt={title}
 					  />
-    	    		<CardContent>
-    	      			<Typography gutterBottom variant="h6" component="div" sx={{textAlign: 'center', fontSize: 16}}>
-    	        			{title}
+    	    		<CardContent sx={{ backgroundColor: colors.color_3 }}>
+    	      			<Typography gutterBottom variant="h6" component="div" sx={{textAlign: 'center', fontSize: 16, textDecoration: 'none'}}>
+							{title}
     	      			</Typography>
-    	      			<Typography variant="body2" color="text.secondary" sx={{marginInline: 'auto', fontSize: 14}}>
+    	      			<Typography variant="h6" color="text.secondary" sx={{marginInline: 'auto', fontSize: 14, textDecoration: 'none'}}>
 							{text.slice(0, 100)+'...'}
     	      			</Typography>
     	    		</CardContent>
