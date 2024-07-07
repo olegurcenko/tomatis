@@ -3,7 +3,7 @@ import { TextEditor } from "./textEditor";
 import { useLocation } from "react-router-dom";
 import { pagesData } from '../pagesData/pages'
 import { colors } from "../../media/colorsModule";
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { StepperCreator } from "./stepper";
 
 export const Page:React.FC = () => {
@@ -11,8 +11,8 @@ export const Page:React.FC = () => {
 	const pageName: string | null = new URLSearchParams(location.search).get('name');
 	const card = pagesData.find((card: { link: string | null; }) => card.link === pageName)
 	return (
-		<section style={{backgroundColor: colors.color_3, paddingBlock: 5, maxWidth: 1200, marginInline: 'auto', position: 'relative', top: '-5px'}}>
-			<Typography variant="h3" sx={{textAlign: 'center', marginBlock: '20px'}}>
+		<Box sx={{backgroundColor: colors.color_3, paddingBlock: 5, maxWidth: 1200, marginInline: 'auto', position: 'relative', top: {xs: '80px', lg: '160px'}, marginBottom: {xs: '100px', lg: '160px'}}}>
+			<Typography variant="h3" sx={{textAlign: 'center', marginBlock: '20px', maxWidth: '90%'}}>
 				{card!.title}
 			</Typography>
       		<img
@@ -22,6 +22,6 @@ export const Page:React.FC = () => {
       		/>
       		<TextEditor content={card!.text} />
 			{card?.steps ? <StepperCreator steps={card.steps}/> : null}
-		</section>
+		</Box>
 	)
 }
