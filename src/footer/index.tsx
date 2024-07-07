@@ -1,12 +1,12 @@
 import React from "react";
-import styles from './media/styles/footer.module.scss'
+import styles from './styles/footer.module.scss'
 import { Link } from "react-router-dom";
-import logo from './media/logo.png';
-import inst_img from './media/inst.webp';
-import tg_img from './media/tg.webp';
-import vk_img from './media/vk.png';
-import fb_img from './media/fb.webp';
-import data from './info.json';
+import logo from '../media/imagesToUse/logo.png';
+import inst_img from '../media/imagesToUse/inst.webp';
+import tg_img from '../media/imagesToUse/tg.webp';
+import vk_img from '../media/imagesToUse/vk.png';
+import fb_img from '../media/imagesToUse/fb.webp'
+import data from '../info.json';
 
 export const Footer: React.FC = () => {
 	
@@ -47,13 +47,19 @@ export const Footer: React.FC = () => {
 							<h4 className={styles.title}>Ссылки:</h4>
 						</li>
 						<li>
-							<Link className={styles.textLink} to={''}>Услуги</Link>
+							<Link className={styles.textLink} to={'/page?name=foreign_languages'}>Иностранные языки</Link>
 						</li>
 						<li>
-							<Link className={styles.textLink} to={''}>Специалисты</Link>
+							<Link className={styles.textLink} to={''}>Оборудование</Link>
 						</li>
 						<li>
-							<Link className={styles.textLink} to={''}>О Центре</Link>
+							<Link className={styles.textLink} to={'/therapy'}>Суть терапии</Link>
+						</li>
+						<li>
+							<Link className={styles.textLink} to={'/method'}>Метод</Link>
+						</li>
+						<li>
+							<Link className={styles.textLink} to={'/price'}>Цены</Link>
 						</li>
 					</ul>
 					<ul className={styles.infoColumn}>

@@ -51,7 +51,7 @@ const services = [
 
 export const Prices:React.FC = () => {
 	return (
-		<Box sx={{maxWidth: 1200, width: '90%', marginInline: 'auto', position: 'relative', top: '-10px'}}>
+		<Box sx={{maxWidth: 1200, width: '90%', marginInline: 'auto', position: 'relative', top: {xs: '80px', lg: '160px'}, marginBottom: {xs: '100px', lg: '160px'}}}>
 			<Typography variant="h4" sx={{position: 'relative',top: '10px', backgroundColor: colors.color_2, color: colors.color_white, paddingBlock: 3, textAlign: 'center'}} >
 				Цены на услуги
 			</Typography>
