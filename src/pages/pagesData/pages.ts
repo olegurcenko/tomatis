@@ -13,6 +13,8 @@ import giger from './media/giger.png'
 import horse from './media/horse.png'
 import half_sphere from './media/halfsphere.jpeg'
 import personal_exes from './media/personal_exers.png'
+import sky_walking from './media/sky_walking.png'
+import c_eye from './media/c_eye.png'
 import { CardInterface } from '../helpers/cardsData'
 
 export const pagesData:CardInterface[] = [
@@ -274,5 +276,17 @@ export const pagesData:CardInterface[] = [
 			Упражнения для моторики рта улучшают произношение и контроль над мышцами рта и вокруг него.
 			Мы развиваем моторику письма с помощью упражнений трудотерапии.`,
 		image: personal_exes
+	},
+	{
+		link: 'sky_walking',
+		title: 'Ходящий по небу',
+		text: `С помощью этого устройства двигательная память учится стоять прямо и ходить. `,
+		image: sky_walking
+	},
+	{
+		link: 'c_eye',
+		title: 'C Eye',
+		text: `Мы стимулируем мозг, выполняя упражнения, задействующие зрительную систему. Вы можете решать различные задания, используя только глаза. Систему также можно использовать как средство общения для людей, которые не умеют говорить.`,
+		image: c_eye
 	},
 ]
