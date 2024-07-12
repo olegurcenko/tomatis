@@ -12,6 +12,7 @@ import card_2 from './media/card2.png'
 import card_3 from './media/card3.png'
 import card_4 from './media/card4.png'
 import card_5 from './media/card5.png'
+import card_6 from './media/card6.png'
 import styles from './media/homepage.module.scss'
 import { CardsHomepage } from "../helpers/cardsHomepage";
 
@@ -53,6 +54,11 @@ const homeServices = [
 		title: 'Иностранные языки',
 		link: 'page?name=foreign_languages',
 		image: card_5,
+	},
+	{
+		title: 'Дополнительные терапии',
+		link: 'additional_methods',
+		image: card_6,
 	},
 
 	

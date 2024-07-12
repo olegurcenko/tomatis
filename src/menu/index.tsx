@@ -25,11 +25,11 @@ export const Menu: React.FC<onCloseProps> = ({ isClosing, onClose }) => {
     <div className={isClosing ? styles.popupClosing : styles.popup}>
       <div className={styles.popupContent}>
         <div className={styles.linkColumn}>
-		      <Link className={styles.service} onClick={onClose} to={'/method'}>Метод</Link>
-		      <Link className={styles.service} onClick={onClose} to={'/therapy'}>Суть терапии</Link>
+		      <Link className={styles.service} onClick={onClose} to={'/therapy'}>Терапия</Link>
 		      <Link className={styles.service} onClick={onClose} to={'/price'}>Цены</Link>
+		      {/*<Link className={styles.service} onClick={onClose} to={'/method'}>Метод</Link>
 		      <Link className={styles.service} onClick={onClose} to={'/equipment'}>Оборудование</Link>
-		      <Link className={styles.service} onClick={onClose} to={'/page?name=foreign_languages'}>Языки</Link>
+		      <Link className={styles.service} onClick={onClose} to={'/page?name=foreign_languages'}>Языки</Link>*/}
         </div>
         <section className={styles.links}>
           {data.links.map((link) => (

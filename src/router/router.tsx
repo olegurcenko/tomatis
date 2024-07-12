@@ -6,6 +6,7 @@ import { Page } from "../pages/helpers/pageCreator";
 import { Therapy } from "../pages/therapy/therapy";
 import { Prices } from "../pages/prices/prices";
 import { Equipment } from "../pages/equipment/equipment";
+import { AdditionalMethods } from "../pages/additionalMethods/additionalMethods";
 
 export const AppRouter: React.FC = () => {
 	return (
@@ -16,6 +17,7 @@ export const AppRouter: React.FC = () => {
 			<Route path="/page" Component={Page}/>
 			<Route path="/price" Component={Prices}/>
 			<Route path="/equipment" Component={Equipment}/>
+			<Route path="/additional_methods" Component={AdditionalMethods}/>
 		</Routes>
 	)
 }

@@ -9,11 +9,8 @@ import styles from './media/header.module.scss';
 
 export const Header:React.FC = () => {
 	const navItems = [
-    {link: 'method', title: 'Метод'},
-    {link: 'therapy', title: 'Суть терапии'},
+    {link: 'therapy', title: 'Терапия'},
     {link: 'price', title: 'Цены'},
-    {link: 'equipment', title: 'Оборудование'},
-    {link: 'page?name=foreign_languages', title: 'Языки'}
   ];
 	const [mobileOpen, setMobileOpen] = React.useState(false);
 	const handleDrawerToggle = () => {
