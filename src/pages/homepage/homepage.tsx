@@ -7,7 +7,13 @@ import image_2 from './media/2.jpg'
 import image_3 from './media/3.jpg'
 import image_4 from './media/4.jpg'
 import image_5 from './media/5.jpg'
+import card_1 from './media/card1.png'
+import card_2 from './media/card2.png'
+import card_3 from './media/card3.png'
+import card_4 from './media/card4.png'
+import card_5 from './media/card5.png'
 import styles from './media/homepage.module.scss'
+import { CardsHomepage } from "../helpers/cardsHomepage";
 
 const textHomepage = [
 	'Центр "Без границ" специализируется на инновационном методе лечения неговорящих детей — методе Томатиса. Мы с гордостью помогаем детям на пути к развитию и восстановлению речевых функций, используя передовые технологии и профессиональный подход.',
@@ -22,9 +28,44 @@ const textHomepage = [
 	Давайте вместе сделаем шаг в будущее без границ для вашего ребенка!`
 ]
 
+const homeServices = [
+	{
+		title: 'В чем заключается метод?',
+		link: 'method',
+		image: card_1,
+	},
+	{
+		title: 'Как проходит терапия?',
+		link: 'therapy',
+		image: card_2,
+	},
+	{
+		title: 'Голос матери',
+		link: 'mothers_voice',
+		image: card_3,
+	},
+	{
+		title: 'Оборудование',
+		link: 'qeuipment',
+		image: card_4,
+	},
+	{
+		title: 'Иностранные языки',
+		link: 'page?name=foreign_languages',
+		image: card_5,
+	},
+
+	
+]
+
 export const Homepage:React.FC = () => {
 	return (
 		<Box sx={{backgroundColor: colors.color_3, maxWidth: '1200px', marginInline: 'auto', width: '90%', position: 'relative', top: {xs: '70px', lg: '150px'}, marginBottom: {xs: '70px', lg: '150px'}, paddingBottom: '20px'}}>
+			<Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', maxWidth: 1200, width: '90%', marginInline: 'auto', position: 'relative', top: {xs: '80px', lg: '160px'}, paddingBottom: {xs: '100px', lg: '160px'}}}>
+				{homeServices.slice(0, 6).map((page, index) => (
+          			<CardsHomepage key={index} {...page} />
+        		))}			
+			</Box>
 			<Typography variant="h3" className={styles.mainTitle}>
 				Добро пожаловать в центр "Без границ"!
 			</Typography>

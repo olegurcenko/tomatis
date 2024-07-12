@@ -10,3 +10,9 @@ export interface CardInterface {
 	link: string;
 	steps?: StepData[]
 }
+
+export interface HomepageCardInterface {
+	image: string;
+	title: string;
+	link: string;
+}
