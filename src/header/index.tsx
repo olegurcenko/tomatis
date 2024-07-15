@@ -60,7 +60,7 @@ export const Header: React.FC = () => {
                     </Link>
                 </li>
                 <li className={styles.services}>
-                    <Link className={styles.service} to={'/method'}>
+                    {/*<Link className={styles.service} to={'/method'}>
                         <Button sx={{color: colors.colorGrey}}>
                             Метод
                         </Button>
@@ -71,11 +71,6 @@ export const Header: React.FC = () => {
                             Суть терапии
                         </Button>
                     </Link>
-                    <Link className={styles.service} to={'/price'}>
-                        <Button sx={{color: colors.colorGrey}}>
-                            Цены
-                        </Button>
-                    </Link>
                     <Link className={styles.service} to={'/equipment'}>
                         <Button sx={{color: colors.colorGrey}}>
                             Оборудование
@@ -84,6 +79,16 @@ export const Header: React.FC = () => {
                     <Link className={styles.service} to={'/page?name=foreign_languages'}>
                         <Button sx={{color: colors.colorGrey}}>
                             Языки
+                        </Button>
+                    </Link>*/}
+                    <Link className={styles.service} to={'/price'}>
+                        <Button sx={{color: colors.colorGrey}}>
+                            Цены
+                        </Button>
+                    </Link>
+                    <Link className={styles.service} to={'/contacts'}>
+                        <Button sx={{color: colors.colorGrey}}>
+                            Контакты
                         </Button>
                     </Link>
                 </li>
