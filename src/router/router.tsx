@@ -7,6 +7,7 @@ import { Therapy } from "../pages/therapy/therapy";
 import { Prices } from "../pages/prices/prices";
 import { Equipment } from "../pages/equipment/equipment";
 import { AdditionalMethods } from "../pages/additionalMethods/additionalMethods";
+import { Contacts } from "../pages/contacts/contacts";
 
 export const AppRouter: React.FC = () => {
 	return (
@@ -18,6 +19,7 @@ export const AppRouter: React.FC = () => {
 			<Route path="/price" Component={Prices}/>
 			<Route path="/equipment" Component={Equipment}/>
 			<Route path="/additional_methods" Component={AdditionalMethods}/>
+			<Route path="/contacts" Component={Contacts}/>
 		</Routes>
 	)
 }
