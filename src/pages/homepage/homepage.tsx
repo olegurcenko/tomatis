@@ -67,7 +67,8 @@ const homeServices = [
 export const Homepage:React.FC = () => {
 	return (
 		<Box sx={{backgroundColor: colors.color_3, maxWidth: '1200px', marginInline: 'auto', width: '90%', position: 'relative', top: {xs: '70px', lg: '150px'}, marginBottom: {xs: '70px', lg: '150px'}, paddingBottom: '20px'}}>
-			<Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', maxWidth: 1200, width: '90%', marginInline: 'auto', position: 'relative', top: {xs: '80px', lg: '160px'}, paddingBottom: {xs: '100px', lg: '160px'}}}>
+			<Typography sx={{position: 'relative', fontSize: {xs: '36px', md: '48px', lg: '52px'}, top: {xs: '30px', md: '30px'}, marginBottom: {lg: '30px'}, textAlign: 'center'}}>Без границ</Typography>
+			<Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', maxWidth: 1200, width: '90%', marginInline: 'auto', position: 'relative', top: {xs: '30px', lg: '0px'}, paddingBottom: {xs: '20px', lg: '40px'}}}>
 				{homeServices.slice(0, 6).map((page, index) => (
           			<CardsHomepage key={index} {...page} />
         		))}			
