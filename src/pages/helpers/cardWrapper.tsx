@@ -16,7 +16,7 @@ export const CardWrapper:React.FC<CardInterface> = ({image, title, text, link}) 
     	    		  image={image}
     	    		  alt={title}
 					  />
-    	    		<CardContent sx={{ backgroundColor: colors.color_3 }}>
+    	    		<CardContent sx={{ backgroundColor: colors.color_2_half }}>
     	      			<Typography gutterBottom variant="h6" component="div" sx={{textAlign: 'center', fontSize: 16, textDecoration: 'none'}}>
 							{title}
     	      			</Typography>
