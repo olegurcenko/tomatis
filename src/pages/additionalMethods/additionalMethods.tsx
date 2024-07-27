@@ -9,7 +9,7 @@ const additMethods = 'В Атлантисе мы знаем, что слухов
 
 export const AdditionalMethods:React.FC = () => {
 	return (
-		<section style={{backgroundColor: colors.color_3, maxWidth: '1200px', marginInline: 'auto', width: '90%'}}>
+		<section style={{ maxWidth: '1200px', marginInline: 'auto', width: '90%'}}>
 			<Typography variant="h3" sx={{marginInline: 'auto', width: 'fit-content', position: 'relative', top: {xs: '100px', lg: '200px'}, marginBottom: {xs: '50px', lg: '80px'}, color: colors.color_grey}}>Дополнительные методы</Typography>
 			<Box sx={{marginInline: 'auto', width: 'fit-content', position: 'relative', top: {xs: '100px', lg: '200px'}, marginBottom: {xs: '50px', lg: '80px'}, color: colors.color_grey}}>
 				<TextEditor content={additMethods}/>
