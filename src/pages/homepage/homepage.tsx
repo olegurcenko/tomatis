@@ -1,6 +1,6 @@
 import React from "react";
 import { TextEditor } from "../helpers/textEditor";
-import { Box, Typography } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import { colors } from "../../media/colorsModule";
 import image_1 from './media/1.jpg'
 import image_2 from './media/2.jpg'
@@ -67,7 +67,8 @@ const homeServices = [
 export const Homepage:React.FC = () => {
 	return (
 		<Box sx={{ maxWidth: '1200px', marginInline: 'auto', width: '90%', position: 'relative', top: {xs: '70px', lg: '150px'}, marginBottom: {xs: '70px', lg: '150px'}, paddingBottom: '20px'}}>
-			<Typography sx={{position: 'relative', fontSize: {xs: '36px', md: '48px', lg: '52px'}, top: {xs: '30px', md: '30px'}, marginBottom: {lg: '30px'}, textAlign: 'center'}}>Без границ</Typography>
+			<Typography sx={{position: 'relative', fontSize: {xs: '24px', md: '36px', lg: '36px'}, top: {xs: '30px', md: '30px'}, marginBottom: {lg: '30px'}, textAlign: 'center'}}>Слуховая стимуляция мозга по методу А. Томатиса</Typography>
+			<Divider sx={{marginBlock: 3}} />
 			<Box component="ul" sx={{ display: 'flex', justifyContent: "center", alignItems: "center", gap: 2, flexWrap: 'wrap', p: 0, marginBlock: 4 }}>
 				{homeServices.slice(0, 6).map((page, index) => (
           			<CardsHomepage key={index} {...page} />
