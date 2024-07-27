@@ -10,7 +10,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 
 export const Contacts:React.FC = () => {
 	return (
-		<Box sx={{backgroundColor: colors.color_3, maxWidth: '1200px', marginInline: 'auto', width: '90%', position: 'relative', top: {xs: '90px', lg: '170px'}, marginBottom: {xs: '110px', lg: '190px'}, paddingBottom: '20px', borderRadius: '25px', paddingTop: '30px'}}>
+		<Box sx={{ maxWidth: '1200px', marginInline: 'auto', width: '90%', position: 'relative', top: {xs: '90px', lg: '170px'}, marginBottom: {xs: '110px', lg: '190px'}, paddingBottom: '20px', borderRadius: '25px', paddingTop: '30px'}}>
 			<Typography variant="h5" sx={{textAlign: 'center'}}>
 				Контакты
 			</Typography>
