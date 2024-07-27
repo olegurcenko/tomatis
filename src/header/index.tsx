@@ -81,6 +81,16 @@ export const Header: React.FC = () => {
                             Языки
                         </Button>
                     </Link>*/}
+                    <Link className={styles.service} to={'/stuff'}>
+                        <Button sx={{color: colors.colorGrey}}>
+                            Специалисты
+                        </Button>
+                    </Link>
+                    <Link className={styles.service} to={'/reviews'}>
+                        <Button sx={{color: colors.colorGrey}}>
+                            Отзывы
+                        </Button>
+                    </Link>
                     <Link className={styles.service} to={'/price'}>
                         <Button sx={{color: colors.colorGrey}}>
                             Цены
