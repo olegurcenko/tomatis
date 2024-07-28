@@ -81,7 +81,7 @@ export const Header: React.FC = () => {
                             Языки
                         </Button>
                     </Link>*/}
-                    <Link className={styles.service} to={'/stuff'}>
+                    <Link className={styles.service} to={'/staff'}>
                         <Button sx={{color: colors.colorGrey}}>
                             Специалисты
                         </Button>
