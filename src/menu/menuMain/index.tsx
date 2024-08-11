@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './styles/menu.module.scss'
-import inst_img from '../media/imagesToUse/inst.webp';
-import tg_img from '../media/imagesToUse/tg.webp';
-import vk_img from '../media/imagesToUse/vk.png';
-import fb_img from '../media/imagesToUse/fb.webp';
-import data from '../info.json';
+import inst_img from '../../media/imagesToUse/inst.webp';
+import tg_img from '../../media/imagesToUse/tg.webp';
+import vk_img from '../../media/imagesToUse/vk.png';
+import fb_img from '../../media/imagesToUse/fb.webp';
+import data from '../../info.json';
 
 export interface onCloseProps {
 	onClose: () => void;
@@ -25,14 +25,10 @@ export const Menu: React.FC<onCloseProps> = ({ isClosing, onClose }) => {
     <div className={isClosing ? styles.popupClosing : styles.popup}>
       <div className={styles.popupContent}>
         <div className={styles.linkColumn}>
-		      {/*<Link className={styles.service} onClick={onClose} to={'/therapy'}>Терапия</Link>*/}
 		      <Link className={styles.service} onClick={onClose} to={'/price'}>Цены</Link>
-		      {/*<Link className={styles.service} onClick={onClose} to={'/about_center'}>О центре</Link>*/}
-		      {/*<Link className={styles.service} onClick={onClose} to={'/stuff'}>Специалисты</Link>*/}
 		      <Link className={styles.service} onClick={onClose} to={'/contacts'}>Контакты</Link>
-		      {/*<Link className={styles.service} onClick={onClose} to={'/method'}>Метод</Link>
-		      <Link className={styles.service} onClick={onClose} to={'/equipment'}>Оборудование</Link>
-		      <Link className={styles.service} onClick={onClose} to={'/page?name=foreign_languages'}>Языки</Link>*/}
+		      <Link className={styles.service} onClick={onClose} to={'/reviews'}>Отзывы</Link>
+		      <Link className={styles.service} onClick={onClose} to={'/about_us'}>О нас</Link>
         </div>
         <section className={styles.links}>
           {data.links.map((link) => (

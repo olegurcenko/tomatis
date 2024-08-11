@@ -7,7 +7,7 @@ import styles from './cardStyles.module.scss'
 
 export const CardWrapper:React.FC<CardInterface> = ({image, title, text, link}) => {
 	return (
-		<Link className={styles.link} to={`/page?name=${link}`}>
+		<Link className={styles.link} to={`/tomatis/page?name=${link}`}>
 			<Card sx={{ width: 350, marginBlock: '20px' }}>
     	  		<CardActionArea>
     	    		<CardMedia

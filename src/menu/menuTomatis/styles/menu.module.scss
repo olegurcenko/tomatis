@@ -1,0 +1,91 @@
+@import '../../../media/_colors.module';
+@keyframes open {
+	from {
+		left: -100%;
+	}
+	to {
+		left: 0;
+	}
+}
+.popup {
+	animation: open .8s 1;
+	z-index: 100;
+	position: fixed;
+	top: 73px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+  }
+  
+  @keyframes close {
+	from {
+	  left: 0;
+	}
+	to {
+	  left: -100%;
+	}
+}
+
+  .popupClosing {
+	animation: close .8s 1;
+	z-index: 100;
+	position: fixed;
+	top: 70px;
+	left: 0;
+	width: fit-content;
+	height: 100%;
+	display: flex;
+}
+
+.popupContent {
+	backdrop-filter: blur(4px);
+	z-index: inherit;
+	width: fit-content;
+	background: $color-2-half;
+	padding: 40px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	.linkColumn {
+	  display: flex;
+	  flex-direction: column;
+	  .service {
+		text-decoration: none;
+		color: $color-grey; 
+		font-weight: 400;
+	
+		margin-bottom: 20px;
+		font-size: 24px; 
+	  }
+	}
+	.links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.link {
+			width: 45px;
+			height: 45px;
+			background-color: $color-white;
+			margin-bottom: 5px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50px;
+			img {
+				width: 45px; 
+			}
+		}
+	}
+	.contacts {
+		//position: relative;
+		//bottom: -200px;
+		margin-bottom: 30px;
+		p {
+			font-size: 16px;
+		}
+	}
+  }
+  
+  
