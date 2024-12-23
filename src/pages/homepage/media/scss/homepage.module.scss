@@ -1,0 +1,21 @@
+@media screen and (max-width: 1200px) {
+	.homepage {
+		position: relative;
+		top: 70px;
+		margin-bottom: 80px;
+	}
+}
+.homepage {
+	max-width: 1200px;
+	margin-inline: auto;
+	position: relative;
+	top: 165px;
+	margin-bottom: 175px;
+	.card {
+		width: 350px;
+		.cardImg {
+			width: 350px;
+			height: auto;
+		}
+	}
+}

@@ -1,8 +1,13 @@
+@import './media/colors.module';
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');* {
   font-family: "Ubuntu Sans Mono", monospace!important;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: $color-white;
 }
 
 ul {

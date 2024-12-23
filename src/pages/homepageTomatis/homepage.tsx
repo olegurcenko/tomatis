@@ -8,7 +8,6 @@ import card_3 from './media/card3.png'
 import card_4 from './media/card4.png'
 import card_5 from './media/card5.png'
 import card_6 from './media/card6.png'
-import styles from './media/homepage.module.scss'
 import { CardsHomepage } from "../helpers/cardsHomepage";
 
 const homeServices = [
@@ -46,7 +45,7 @@ const homeServices = [
 	
 ]
 
-export const Homepage:React.FC = () => {
+export const HomepageTomatis:React.FC = () => {
 	return (
 		<Box sx={{ maxWidth: '1200px', marginInline: 'auto', width: '90%', position: 'relative', top: {xs: '70px', lg: '150px'}, marginBottom: {xs: '70px', lg: '150px'}, paddingBottom: '20px'}}>
 			<Typography sx={{position: 'relative', fontSize: {xs: '24px', md: '36px', lg: '36px'}, top: {xs: '30px', md: '30px'}, marginBottom: {lg: '30px'}, textAlign: 'center'}}>Слуховая стимуляция мозга по методу А. Томатиса</Typography>

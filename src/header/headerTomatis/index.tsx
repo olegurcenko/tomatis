@@ -5,13 +5,21 @@ import tg_img from '../../media/imagesToUse/tg.webp';
 import vk_img from '../../media/imagesToUse/vk.png';
 import fb_img from '../../media/imagesToUse/fb.webp'
 import logo from '../../media/imagesToUse/logo.png'
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import styles from './styles/header.module.scss'
 import { Menu } from "../../menu/menuTomatis/index";
 import { Button } from "@mui/material";
 import colors from '../../media/_colors.module.scss'
 import { MailSender } from "../../mailSender/MailSender";
+import { ChangeCircle } from "@mui/icons-material";
+
 export const HeaderTomatis: React.FC = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
+    
+    // Determine the target link based on the current path
+    const targetLink = location.pathname === '/tomatis' ? '/' : '/tomatis';
+  
     const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
     const [isMailSendOpen, setMailSendOpen] = useState<boolean>(false);
     const [isMenuClosing, setMenuClosing] = useState<boolean>(false);
@@ -30,6 +38,8 @@ export const HeaderTomatis: React.FC = () => {
 			setMenuClosing(false); // Reset closing state after animation duration
 		}, 800);
 	};
+
+
 
     const networksPhotoTemp: { [key: string]: string } = {
         instagram: inst_img,
@@ -57,7 +67,7 @@ export const HeaderTomatis: React.FC = () => {
             </ul>
             <ul className={styles.headerBottom}>
                 <li className={styles.logo}>
-                    <Link to={'/'}>
+                    <Link to={'/tomatis'}>
                         <img src={logo} alt="" />
                     </Link>
                 </li>
@@ -65,7 +75,6 @@ export const HeaderTomatis: React.FC = () => {
                     <Link className={styles.service} to={'/tomatis/staff'}>
                         <Button sx={{color: colors.colorGrey}}>
                             Специалисты
-                            
                         </Button>
                     </Link>
                     <Link className={styles.service} to={'/tomatis/about_us'}>
@@ -88,6 +97,11 @@ export const HeaderTomatis: React.FC = () => {
                             Контакты
                         </Button>
                     </Link>
+                </li>
+                <li className={styles.buttonPortal}>
+                    <Button onClick={() => navigate(targetLink)}>
+                        <ChangeCircle/>
+                    </Button>
                 </li>
                 <li className={styles.buttonForContact}>
                     <Button onClick={() => setMailSendOpen(true)}>Записаться</Button>

@@ -2,34 +2,38 @@
 
 .header {
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	z-index: 101;
+	z-index: 1;
 }
 
 @media screen and (max-width: 1200px) {
-	
+
 	.headerTop {
 		display: none !important;
 	}
-	
+
 	.headerBottom {
 		.services {
 			display: none !important;
 		}
+
 		padding-block: 5px;
+
 		.logo {
 			margin-left: 10px;
+
 			img {
-				height: 50px!important;
+				height: 50px !important;
 			}
 		}
+
 		.menuBtn {
 			display: block !important;
 			margin-right: 20px;
-	
+
 			.menu {
 				--s: 20px;
 				--c: black;
-	
+
 				height: var(--s);
 				aspect-ratio: 1;
 				border: none;
@@ -56,7 +60,7 @@
 				-webkit-appearance: none;
 				-moz-appearance: none;
 				appearance: none;
-	
+
 				&:before,
 				&:after {
 					content: "";
@@ -66,21 +70,21 @@
 					background: var(--c);
 					transition: transform .3s calc(.3s - var(--_s, .3s));
 				}
-	
+
 				&:checked {
 					clip-path: inset(0);
 					--_p: calc(-1*var(--s));
 					--_s: 0s;
 				}
-	
+
 				&:checked:before {
 					transform: rotate(45deg);
 				}
-	
+
 				&:checked:after {
 					transform: rotate(-45deg);
 				}
-	
+
 				&:focus-visible {
 					clip-path: none;
 					-webkit-mask: none;
@@ -90,22 +94,24 @@
 				}
 			}
 		}
+
 		.buttonForContact {
 			position: absolute;
 			right: 80px;
+
 			button {
-				height: 40px!important;
-				padding: 7px 10px!important;
+				height: 40px !important;
+				padding: 7px 10px !important;
 			}
 		}
 	}
 
-	
+
 }
 
 .header {
 	position: fixed;
-	z-index: 20;
+	z-index: 1;
 	font-weight: 500;
 	font-size: 16px;
 	width: 100%;
@@ -125,6 +131,7 @@
 			justify-content: space-between;
 			display: flex;
 			align-items: center;
+
 			.link {
 				img {
 					height: 35px;
@@ -144,6 +151,7 @@
 		.logo {
 			display: flex;
 			align-items: center;
+
 			img {
 				height: 90px;
 			}
@@ -169,6 +177,59 @@
 				display: none;
 			}
 		}
+		.buttonPortal {
+			position: absolute;
+			right: 200px; // Adjust this value to position it to the left of the .buttonForContact button
+			z-index: 10;
+			
+			button {
+				appearance: none;
+				backface-visibility: hidden;
+				background-color: $color-2-half;
+				border-style: none;
+				box-shadow: none;
+				box-sizing: border-box;
+				color: $color-grey;
+				cursor: pointer;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 25px; // Adjust as needed
+				height: 40px;
+				border-radius: 10px;
+				outline: none;
+				overflow: hidden;
+				padding: 0;
+				position: relative;
+				text-align: center;
+				text-decoration: none;
+				transform: translate3d(0, 0, 0);
+				transition: all .3s;
+				user-select: none;
+				vertical-align: top;
+				
+				&:hover {
+					background-color: $color-2;
+					color: $color-white;
+					box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
+					opacity: 1;
+					transform: translateY(0);
+					transition-duration: .35s;
+				}
+				
+				&:active {
+					box-shadow: rgba(0, 0, 0, .1) 0 3px 6px, rgba(0, 0, 0, .1) 0 0 10px, rgba(0, 0, 0, .1) 0 1px 4px -1px;
+					transform: translateY(2px);
+					transition-duration: .35s;
+				}
+			}
+			@media screen and (min-width: 900px) {
+				button {
+					display: none;
+				}
+			}
+		}
+		
 
 		.buttonForContact {
 			button {
