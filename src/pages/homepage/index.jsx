@@ -15,6 +15,7 @@ import { TomatisEffectiveness } from "./tomatisEffectiveness/tomatisEffectivenes
 import { TherapyProcess } from "./therapyProcess/therapyProcess";
 import { TherapyDetails } from "./therapyDetails/therapyDetails";
 import { VideoElem } from "./videoElem/videoElem";
+import { ConsultationList } from "./consultationList/consultationist";
 
 
 const text = [`Добро пожаловать в Центр развития речи Ирины Николаевой  “Без Границ”– место, где мы поддерживаем детей и их родителей на пути к полноценному развитию и раскрытию уникальных способностей. Наша команда профессионалов включает (??? в себя???)  нейропсихологов, логопедов, АВА-терапевтов, дефектологов, специалистов по игровой терапии, а также миофункциональных логопедов и эксперта по слуховой стимуляции мозга по методу А. Томатиса.
@@ -96,6 +97,8 @@ export const Homepage = () => {
             <TomatisEffectiveness/>
             <TherapyProcess/>
             <TherapyDetails/>
+            <Typography variant="h3" sx={{textAlign: 'center'}}>УСЛУГИ</Typography>
+            <ConsultationList/>
         </Box>
     )
 }
