@@ -93,10 +93,6 @@ export const Homepage = () => {
             <Features/>
             <CenterInfo/>
             <RulesComponent/>
-            <TomatisComponent/>
-            <TomatisEffectiveness/>
-            <TherapyProcess/>
-            <TherapyDetails/>
             <Typography variant="h3" sx={{textAlign: 'center'}}>УСЛУГИ</Typography>
             <ConsultationList/>
         </Box>
