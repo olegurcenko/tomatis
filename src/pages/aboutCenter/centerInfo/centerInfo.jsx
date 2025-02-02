@@ -122,8 +122,6 @@ export const CenterInfo = () => {
             </Grid>
           ))}
         </Grid>
-
-        {/* Contact Section */}
       </Box>
       <ContactInfo/>
     </ThemeProvider>

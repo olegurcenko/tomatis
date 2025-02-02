@@ -10,7 +10,12 @@ import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import HearingIcon from "@mui/icons-material/Hearing";
+import { useState } from "react";
+import { MailSender } from "../../../mailSender/MailSender";
 export const ContactInfo = () => {
+
+    const [isMailSendOpen, setMailSendOpen] = useState(false);
+
 	return (
 		<Box sx={{ mt: 5, p: 4, backgroundColor: "#e3f2fd", borderRadius: "8px" }}>
           <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2 }}>
@@ -42,10 +47,14 @@ export const ContactInfo = () => {
               color="primary"
               size="large"
               startIcon={<HearingIcon />}
+              onClick={() => setMailSendOpen(true)}
             >
               Записаться на консультацию
             </Button>
           </Box>
+          {isMailSendOpen && (
+                  <MailSender closerFunc={() => setMailSendOpen(false)} />
+                )}
         </Box>
 	)
 }
