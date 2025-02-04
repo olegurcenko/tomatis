@@ -5,7 +5,7 @@ import styles from "./mailSender.module.scss";
 import { colors } from "../media/colorsModule";
 import CloseIcon from "@mui/icons-material/Close";
 
-export const MailSender = ({ closerFunc }) => {
+export const MailSender = ({ closerFunc, procedurePlaceholder = "Введите название процедуры" }) => {
   const [loading, setLoading] = useState(false);
   const nameRef = useRef();
   const procedureRef = useRef();
@@ -96,7 +96,7 @@ export const MailSender = ({ closerFunc }) => {
             <TextField
               inputRef={procedureRef}
               label="Процедура"
-              placeholder="Введите название процедуры"
+              placeholder={procedurePlaceholder} // Dynamic placeholder
               fullWidth
               required
             />

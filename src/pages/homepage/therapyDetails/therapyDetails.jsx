@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Card,
@@ -16,12 +16,17 @@ import {
   TableRow,
   Paper,
   Divider,
+  Button,
 } from "@mui/material";
 import ScheduleIcon from "@mui/icons-material/Schedule";
 import PlaylistAddCheckIcon from "@mui/icons-material/PlaylistAddCheck";
 import InfoIcon from "@mui/icons-material/Info";
+import { MailSender } from "../../../mailSender/MailSender";
+import { colors } from "../../../media/colorsModule";
 
 export const TherapyDetails = () => {
+    const [isMailSendOpen, setMailSendOpen] = useState(false);
+  
   return (
     <Box
       sx={{
@@ -214,6 +219,27 @@ export const TherapyDetails = () => {
               </li>
             </ul>
           </Typography>
+          <Box sx={{display: 'flex', justifyContent: 'center', marginTop :'50px'}}>
+
+          <Button
+            onClick={() => setMailSendOpen(true)}
+            sx={{
+              backgroundColor: colors.color_2,
+              color: "white",
+              padding: "8px 15px",
+              borderRadius: "20px",
+              fontSize: "24px",
+              "&:hover": {
+                backgroundColor: colors.color_2_half,
+              },
+            }}
+            >
+            Записаться
+          </Button>
+            </Box>
+          {isMailSendOpen && (
+                  <MailSender closerFunc={() => setMailSendOpen(false)} />
+                )}
         </CardContent>
       </Card>
     </Box>

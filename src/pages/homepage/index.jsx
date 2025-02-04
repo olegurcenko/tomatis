@@ -79,8 +79,6 @@ export const Homepage = () => (
         <Typography variant="h3" sx={{ textAlign: 'center' }}>Отзывы</Typography>
         <CarouselReviews/>
         {/*
-        <CenterInfo />
-        <RulesComponent />
         <Typography variant="h3" sx={{ textAlign: 'center' }}>УСЛУГИ</Typography>
         <ConsultationList />*/}
     </Box>

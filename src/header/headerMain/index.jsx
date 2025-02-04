@@ -181,7 +181,7 @@ export const HeaderMain = () => {
               Центр
             </MenuItem>
           </MuiMenu>
-          <Button sx={{ color: colors.color_2 }}>Томатис</Button>
+          <Button onClick={() => {navigate('tomatis_page')}} sx={{ color: colors.color_2 }}>Томатис</Button>
           <Button
             sx={{ color: colors.color_2 }}
             aria-controls="services-menu"
@@ -210,7 +210,7 @@ export const HeaderMain = () => {
             </MenuItem>
           </MuiMenu>
           <Button sx={{ color: colors.color_2 }}>Блог</Button>
-          <Button sx={{ color: colors.color_2 }}>Контакты</Button>
+          <Button onClick={() => {navigate('contacts')}} sx={{ color: colors.color_2 }}>Контакты</Button>
         </Box>
         {/* Группа кнопок для мобильных устройств */}
         <Box sx={{ display: "flex", gap: 2, alignItems: "center", ml: "auto" }}>
@@ -296,7 +296,7 @@ export const HeaderMain = () => {
               Центр
             </MenuItem>
           </MuiMenu>
-          <Button sx={{ width: "100%", justifyContent: "start" }}>
+          <Button onClick={() => {navigate('tomatis_page')}} sx={{ width: "100%", justifyContent: "start" }}>
             Томатис
           </Button>
           <Button
