@@ -196,7 +196,7 @@ export const HeaderMain = () => {
             open={Boolean(anchorEl)}
             onClose={handleMenuClose}
           >
-            <MenuItem sx={{ color: colors.color_2 }} onClick={handleMenuClose}>
+            <MenuItem sx={{ color: colors.color_2 }} onClick={() => {navigate('diagnose-consult'); handleMenuClose()}}>
               Диагностика и консультации
             </MenuItem>
             <MenuItem sx={{ color: colors.color_2 }} onClick={handleMenuClose}>

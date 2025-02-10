@@ -13,6 +13,7 @@ import { TomatisPage } from "../pages/tomatisPage/tomatisPage";
 import { AboutCenter } from "../pages/aboutCenter";
 import { Specialists } from "../pages/specialists/specialists";
 import { CenterRules } from "../pages/centerRules/centerRules";
+import { DiagnoseConsult } from "../pages/diagnoseConsult/diagnoseConsult";
 
 export const AppRouter = () => {
 	return (
@@ -22,6 +23,8 @@ export const AppRouter = () => {
 			<Route path="/specialists" element={<Specialists />} />
 			<Route path="/rules" element={<CenterRules />} />
 			<Route path="/tomatis_page" element={<TomatisPage />} />
+			<Route path="/diagnose-consult" element={<DiagnoseConsult />} />
+			
 			{/*<Route path="/method" element={<Method />} />*/}
 			{/*<Route path="/therapy" element={<Therapy />} />*/}
 			{/*<Route path="/page" element={<Page />} />*/}
